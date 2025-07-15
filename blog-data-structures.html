@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mastering Advanced Data Structures - Victor Mokut</title>
+    <meta name="description" content="A deep dive into advanced data structures every programmer should know for optimizing algorithm performance">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Blog Post Specific CSS -->
+    <style>
+        .blog-post-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .blog-post-content p {
+            margin-bottom: 1.5rem;
+        }
+        
+        .blog-post-content h2 {
+            margin-top: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .blog-post-content h3 {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .blog-post-content ul, .blog-post-content ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+        
+        .blog-post-content li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .blog-post-content blockquote {
+            border-left: 4px solid var(--primary-color);
+            padding-left: 1.5rem;
+            font-style: italic;
+            margin: 2rem 0;
+            color: var(--text-light);
+        }
+        
+        .blog-post-content img {
+            border-radius: var(--border-radius);
+            margin: 2rem 0;
+        }
+        
+        .blog-post-content .code-block {
+            background-color: var(--bg-dark);
+            color: #f8f8f2;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            font-family: 'Roboto Mono', monospace;
+            overflow-x: auto;
+            margin: 2rem 0;
+        }
+        
+        .blog-post-header {
+            margin-bottom: 2rem;
+        }
+        
+        .blog-post-meta {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .blog-post-meta .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+        
+        .blog-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .blog-author-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        
+        .blog-author-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .blog-author-info h4 {
+            margin-bottom: 0.25rem;
+        }
+        
+        .blog-author-info p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+        
+        .blog-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin: 2rem 0;
+        }
+        
+        .blog-tag {
+            background-color: rgba(37, 99, 235, 0.1);
+            color: var(--primary-color);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+        
+        .blog-share {
+            margin: 2rem 0;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .blog-share span {
+            font-weight: 500;
+        }
+        
+        .blog-share-links {
+            display: flex;
+            gap: 0.75rem;
+        }
+        
+        .blog-share-links a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--bg-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-color);
+            transition: var(--transition);
+            border: 1px solid var(--border-color);
+        }
+        
+        .blog-share-links a:hover {
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+        
+        .blog-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .blog-nav a {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--text-color);
+            transition: var(--transition);
+        }
+        
+        .blog-nav a:hover {
+            color: var(--primary-color);
+        }
+        
+        .blog-nav i {
+            font-size: 0.875rem;
+        }
+        
+        .prev-post i {
+            order: -1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <span class="logo-text">VM</span>
+                </a>
+                
+                <div class="menu-toggle">
+                    <div class="hamburger"></div>
+                </div>
+                
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="blog.html" class="active">Blog</a></li>
+                    <li><a href="contact.html" class="btn btn-primary">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="container">
+            <div class="breadcrumbs" data-aos="fade-up">
+                <a href="index.html">Home</a> / <a href="blog.html">Blog</a> / <span>Mastering Advanced Data Structures</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Post -->
+    <section class="blog-post section-padding">
+        <div class="container">
+            <div class="blog-post-container">
+                <article class="blog-post-content">
+                    <div class="blog-post-header" data-aos="fade-up">
+                        <h1>Mastering Advanced Data Structures</h1>
+                        <div class="blog-post-meta">
+                            <div class="meta-item">
+                                <i class="far fa-calendar-alt"></i>
+                                <span>May 15, 2025</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="far fa-clock"></i>
+                                <span>8 min read</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="far fa-folder"></i>
+                                <span>Programming</span>
+                            </div>
+                        </div>
+                        
+                        <div class="blog-author">
+                            <div class="blog-author-img">
+                                <img src="https://images.unsplash.com/photo-1618477388954-7852f32655ec?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1528&q=80" alt="Victor Mokut">
+                            </div>
+                            <div class="blog-author-info">
+                                <h4>Victor Mokut</h4>
+                                <p>Software Engineer & Algorithm Enthusiast</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="featured-image" data-aos="fade-up">
+                        <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="Data Structures Visualization">
+                    </div>
+                    
+                    <div data-aos="fade-up">
+                        <p>
+                            In the world of software engineering, the difference between a good solution and an excellent one often comes down to selecting the right data structure. While basic data structures like arrays, linked lists, stacks, and queues form the foundation of programming knowledge, advanced data structures can unlock significant performance improvements and elegant solutions to complex problems.
+                        </p>
+                        
+                        <p>
+                            This article explores several advanced data structures that every experienced programmer should be familiar with. Understanding these structures and their applications will not only improve your algorithm design skills but also prepare you for tackling challenging technical interviews and real-world engineering problems.
+                        </p>
+                        
+                        <h2>1. Segment Trees</h2>
+                        <p>
+                            Segment trees are a versatile data structure used for solving range query problems efficiently. They excel in scenarios where you need to perform operations like finding the sum, minimum, maximum, or other functions over a range of elements, while also supporting updates to individual elements.
+                        </p>
+                        
+                        <h3>Key Features:</h3>
+                        <ul>
+                            <li>Time Complexity: O(log n) for both query and update operations</li>
+                            <li>Space Complexity: O(n) for storing the tree</li>
+                            <li>Perfect for range minimum/maximum queries, range sum queries, and similar problems</li>
+                        </ul>
+                        
+                        <p>
+                            Segment trees shine in competitive programming scenarios and are frequently used in database implementations where range-based operations are common. Their ability to handle both queries and updates efficiently makes them more versatile than simpler structures like prefix sum arrays.
+                        </p>
+                        
+                        <div class="code-block">
+# Python implementation of a segment tree for range sum queries
+class SegmentTree:
+    def __init__(self, arr):
+        self.n = len(arr)
+        # Segment tree size is approximately 4 * n
+        self.tree = [0] * (4 * self.n)
+        self._build(arr, 0, 0, self.n - 1)
+        
+    def _build(self, arr, node, start, end):
+        if start == end:
+            # Leaf node
+            self.tree[node] = arr[start]
+        else:
+            mid = (start + end) // 2
+            # Recursively build left and right children
+            self._build(arr, 2 * node + 1, start, mid)
+            self._build(arr, 2 * node + 2, mid + 1, end)
+            # Internal node stores sum of children
+            self.tree[node] = self.tree[2 * node + 1] + self.tree[2 * node + 2]
+    
+    def update(self, index, value):
+        self._update(0, 0, self.n - 1, index, value)
+        
+    def _update(self, node, start, end, index, value):
+        if start == end:
+            # Update leaf node
+            self.tree[node] = value
+        else:
+            mid = (start + end) // 2
+            if start <= index <= mid:
+                # Update in left subtree
+                self._update(2 * node + 1, start, mid, index, value)
+            else:
+                # Update in right subtree
+                self._update(2 * node + 2, mid + 1, end, index, value)
+            # Update current node based on children
+            self.tree[node] = self.tree[2 * node + 1] + self.tree[2 * node + 2]
+    
+    def query_sum(self, left, right):
+        return self._query_sum(0, 0, self.n - 1, left, right)
+        
+    def _query_sum(self, node, start, end, left, right):
+        if right < start or end < left:
+            # Range completely outside the query
+            return 0
+        
+        if left <= start and end <= right:
+            # Range completely inside the query
+            return self.tree[node]
+        
+        # Partial overlap, query both children
+        mid = (start + end) // 2
+        left_sum = self._query_sum(2 * node + 1, start, mid, left, right)
+        right_sum = self._query_sum(2 * node + 2, mid + 1, end, left, right)
+        
+        return left_sum + right_sum
+</div>
+
+                        <h2>2. Trie (Prefix Tree)</h2>
+                        <p>
+                            Tries are specialized tree structures optimized for handling strings and are particularly useful for dictionary operations like searching, inserting, and deleting strings. They excel at prefix matching operations, making them ideal for autocomplete features, spell checkers, and IP routing algorithms.
+                        </p>
+                        
+                        <h3>Key Features:</h3>
+                        <ul>
+                            <li>Search/Insert/Delete Time Complexity: O(m) where m is the length of the string</li>
+                            <li>Space Efficient for storing strings with common prefixes</li>
+                            <li>Excellent for prefix-based operations like autocomplete</li>
+                        </ul>
+                        
+                        <p>
+                            The space efficiency of tries comes from their ability to share common prefixes among multiple strings. For example, words like "program", "programming", and "programmer" would share nodes for the common prefix "program", resulting in significant space savings compared to storing each string separately.
+                        </p>
+                        
+                        <div class="code-block">
+# Python implementation of a Trie
+class TrieNode:
+    def __init__(self):
+        self.children = {}  # Map from character to TrieNode
+        self.is_end_of_word = False
+
+class Trie:
+    def __init__(self):
+        self.root = TrieNode()
+    
+    def insert(self, word):
+        current = self.root
+        for char in word:
+            if char not in current.children:
+                current.children[char] = TrieNode()
+            current = current.children[char]
+        current.is_end_of_word = True
+    
+    def search(self, word):
+        current = self.root
+        for char in word:
+            if char not in current.children:
+                return False
+            current = current.children[char]
+        return current.is_end_of_word
+    
+    def starts_with_prefix(self, prefix):
+        current = self.root
+        for char in prefix:
+            if char not in current.children:
+                return False
+            current = current.children[char]
+        return True
+    
+    def get_words_with_prefix(self, prefix):
+        current = self.root
+        # Navigate to the end of the prefix
+        for char in prefix:
+            if char not in current.children:
+                return []
+            current = current.children[char]
+        
+        # Collect all words with this prefix
+        words = []
+        self._dfs_words(current, prefix, words)
+        return words
+    
+    def _dfs_words(self, node, prefix, words):
+        if node.is_end_of_word:
+            words.append(prefix)
+        
+        for char, child_node in node.children.items():
+            self._dfs_words(child_node, prefix + char, words)
+</div>
+                        
+                        <h2>3. Disjoint Set Union (Union-Find)</h2>
+                        <p>
+                            The Disjoint Set Union (DSU) data structure, also known as Union-Find, is an elegant solution for tracking elements partitioned into a number of disjoint subsets. Its primary operations are finding which subset an element belongs to (Find) and merging two subsets into one (Union).
+                        </p>
+                        
+                        <img src="https://images.unsplash.com/photo-1611557780559-e90e7c3a83f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=871&q=80" alt="Connected Components">
+                        
+                        <h3>Key Features:</h3>
+                        <ul>
+                            <li>Near-constant time operations with path compression and union by rank</li>
+                            <li>Efficiently determines if two elements are in the same set</li>
+                            <li>Perfect for problems involving connected components</li>
+                        </ul>
+                        
+                        <p>
+                            DSU is widely used in Kruskal's algorithm for finding Minimum Spanning Trees, network connectivity problems, and image processing algorithms for connected component labeling. Its simplicity and efficiency make it an essential tool in many graph-based algorithms.
+                        </p>
+                        
+                        <div class="code-block">
+# Python implementation of Union-Find with path compression and union by rank
+class UnionFind:
+    def __init__(self, n):
+        self.parent = list(range(n))
+        self.rank = [0] * n
+        self.count = n  # Number of connected components
+    
+    def find(self, x):
+        if self.parent[x] != x:
+            self.parent[x] = self.find(self.parent[x])  # Path compression
+        return self.parent[x]
+    
+    def union(self, x, y):
+        root_x = self.find(x)
+        root_y = self.find(y)
+        
+        if root_x == root_y:
+            return False  # Already in the same set
+        
+        # Union by rank
+        if self.rank[root_x] < self.rank[root_y]:
+            self.parent[root_x] = root_y
+        elif self.rank[root_x] > self.rank[root_y]:
+            self.parent[root_y] = root_x
+        else:
+            self.parent[root_y] = root_x
+            self.rank[root_x] += 1
+        
+        self.count -= 1  # Decrease the number of connected components
+        return True
+    
+    def connected(self, x, y):
+        return self.find(x) == self.find(y)
+    
+    def get_count(self):
+        return self.count
+</div>
+                        
+                        <h2>4. Fenwick Tree (Binary Indexed Tree)</h2>
+                        <p>
+                            Fenwick Trees, also known as Binary Indexed Trees (BIT), provide an efficient way to calculate prefix sums in an array while allowing for element updates. They are more space-efficient than segment trees when only prefix-based range queries are needed.
+                        </p>
+                        
+                        <h3>Key Features:</h3>
+                        <ul>
+                            <li>Time Complexity: O(log n) for both update and prefix sum operations</li>
+                            <li>Space Complexity: O(n)</li>
+                            <li>More space-efficient than segment trees for prefix sum queries</li>
+                        </ul>
+                        
+                        <p>
+                            Fenwick trees are widely used in scenarios involving frequency counting, cumulative statistics, and in-place computation of range sum queries. Their compact representation makes them particularly suitable for memory-constrained environments.
+                        </p>
+                        
+                        <blockquote>
+                            The elegance of a Fenwick tree lies in its bit manipulation techniques, where each index is responsible for a specific range of elements determined by its binary representation.
+                        </blockquote>
+                        
+                        <div class="code-block">
+# Python implementation of a Fenwick Tree (Binary Indexed Tree)
+class FenwickTree:
+    def __init__(self, n):
+        self.size = n
+        self.bit = [0] * (n + 1)  # 1-indexed
+    
+    def update(self, index, delta):
+        """Add delta to element at index"""
+        index += 1  # Convert to 1-indexed
+        while index <= self.size:
+            self.bit[index] += delta
+            index += index & -index  # Add the least significant bit
+    
+    def prefix_sum(self, index):
+        """Get sum of elements from 0 to index"""
+        index += 1  # Convert to 1-indexed
+        result = 0
+        while index > 0:
+            result += self.bit[index]
+            index -= index & -index  # Remove the least significant bit
+        return result
+    
+    def range_sum(self, left, right):
+        """Get sum of elements from left to right (inclusive)"""
+        return self.prefix_sum(right) - self.prefix_sum(left - 1)
+    
+    def get_value(self, index):
+        """Get the value at a specific index"""
+        return self.range_sum(index, index)
+</div>
+                        
+                        <h2>5. Sparse Table</h2>
+                        <p>
+                            Sparse Tables offer an efficient solution for range query problems where the data is static (doesn't change). They're particularly useful for range minimum/maximum queries and range GCD (Greatest Common Divisor) queries.
+                        </p>
+                        
+                        <h3>Key Features:</h3>
+                        <ul>
+                            <li>Preprocessing Time: O(n log n)</li>
+                            <li>Query Time: O(1) for idempotent operations (min, max, gcd)</li>
+                            <li>Perfect for static data with frequent queries</li>
+                        </ul>
+                        
+                        <p>
+                            The sparse table achieves its efficiency by precomputing results for ranges whose lengths are powers of 2. For queries, it combines these precomputed results to answer any range query in constant time for operations that are idempotent (where overlapping calculations don't affect the result).
+                        </p>
+                        
+                        <h2>Conclusion</h2>
+                        <p>
+                            Mastering these advanced data structures expands your problem-solving toolkit and enables you to write more efficient algorithms. While these structures may seem complex at first, understanding their principles and applications will help you recognize when to use them in your projects.
+                        </p>
+                        
+                        <p>
+                            Remember that the key to becoming proficient with these data structures is practice. Try implementing them from scratch, solve problems that require their use, and analyze how they compare to simpler alternatives in different scenarios. With time and experience, you'll develop an intuition for selecting the right data structure for each unique problem.
+                        </p>
+                        
+                        <p>
+                            As you continue your journey in software engineering, keep exploring new data structures and algorithms. The field is constantly evolving, and staying curious about these fundamental building blocks will serve you well throughout your career.
+                        </p>
+                        
+                        <div class="blog-tags">
+                            <span class="blog-tag">Data Structures</span>
+                            <span class="blog-tag">Algorithms</span>
+                            <span class="blog-tag">Programming</span>
+                            <span class="blog-tag">Computer Science</span>
+                            <span class="blog-tag">Performance Optimization</span>
+                        </div>
+                        
+                        <div class="blog-share">
+                            <span>Share this article:</span>
+                            <div class="blog-share-links">
+                                <a href="#" aria-label="Share on Twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="#" aria-label="Share on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" aria-label="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" aria-label="Share via Email"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                        
+                        <div class="blog-nav">
+                            <a href="blog-python-generators.html" class="prev-post">
+                                <i class="fas fa-arrow-left"></i>
+                                <span>Understanding Python Generators and Coroutines</span>
+                            </a>
+                            <a href="blog-healthcare-tech.html" class="next-post">
+                                <span>The Future of Healthcare Technology</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Articles -->
+    <section class="related-posts section-padding bg-light">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Related Articles</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="blog-grid">
+                <div class="blog-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="blog-img">
+                        <img src="https://images.unsplash.com/photo-1580894908361-967195033215?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="Algorithm Performance">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-date">April 3, 2025</div>
+                        <h3>Optimizing Algorithm Performance in Production</h3>
+                        <p>Strategies and best practices for refining your algorithms for real-world applications.</p>
+                        <div class="blog-meta">
+                            <span class="blog-category">Algorithms</span>
+                            <span class="blog-read-time">7 min read</span>
+                        </div>
+                        <a href="blog-algorithm-optimization.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="blog-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="blog-img">
+                        <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Python Generators">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-date">March 15, 2025</div>
+                        <h3>Understanding Python Generators and Coroutines</h3>
+                        <p>A deep dive into Python's memory-efficient generators and how they enable asynchronous programming.</p>
+                        <div class="blog-meta">
+                            <span class="blog-category">Python</span>
+                            <span class="blog-read-time">9 min read</span>
+                        </div>
+                        <a href="blog-python-generators.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="blog-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="blog-img">
+                        <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1476&q=80" alt="Graph Algorithms">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-date">February 25, 2025</div>
+                        <h3>Essential Graph Algorithms Every Programmer Should Know</h3>
+                        <p>From Dijkstra to PageRank: Understanding key graph algorithms and their real-world applications.</p>
+                        <div class="blog-meta">
+                            <span class="blog-category">Algorithms</span>
+                            <span class="blog-read-time">10 min read</span>
+                        </div>
+                        <a href="blog-graph-algorithms.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter section-padding">
+        <div class="container">
+            <div class="newsletter-content" data-aos="fade-up">
+                <h2>Subscribe to My Newsletter</h2>
+                <p>Stay updated with my latest articles, projects, and insights on technology and programming.</p>
+                <form class="newsletter-form">
+                    <div class="form-group">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </div>
+                    <div class="form-note">
+                        <small>I respect your privacy. No spam, ever.</small>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span>VM</span>
+                    <p>Victor Mokut</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Connect</h4>
+                        <ul>
+                            <li><a href="https://github.com/vikmokut" target="_blank">GitHub</a></li>
+                            <li><a href="https://linkedin.com/in/vikmokut" target="_blank">LinkedIn</a></li>
+                            <li><a href="mailto:vikmokut@gmail.com">Email</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Victor Mokut. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <a href="#" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- AOS Animation Script -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

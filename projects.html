@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Victor Mokut</title>
+    <meta name="description" content="Explore Victor Mokut's software engineering projects in healthcare, AI, and data science">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <span class="logo-text">VM</span>
+                </a>
+                
+                <div class="menu-toggle">
+                    <div class="hamburger"></div>
+                </div>
+                
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html" class="active">Projects</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html" class="btn btn-primary">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="container">
+            <h1 data-aos="fade-up">My Projects</h1>
+            <div class="breadcrumbs" data-aos="fade-up" data-aos-delay="100">
+                <a href="index.html">Home</a> / <span>Projects</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Filter -->
+    <section class="projects-filter section-padding-sm">
+        <div class="container">
+            <div class="filter-buttons" data-aos="fade-up">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="healthcare">Healthcare</button>
+                <button class="filter-btn" data-filter="ai-ml">AI/ML</button>
+                <button class="filter-btn" data-filter="web">Web Development</button>
+                <button class="filter-btn" data-filter="data">Data Analysis</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="projects-grid-section section-padding-sm">
+        <div class="container">
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-item" data-category="healthcare web" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1032&q=80" alt="EMR System">
+                        </div>
+                        <div class="project-content">
+                            <h3>EMR System</h3>
+                            <p>A comprehensive Electronic Medical Records system built with Django and PostgreSQL, designed for healthcare facilities.</p>
+                            <div class="project-tags">
+                                <span>Django</span>
+                                <span>PostgreSQL</span>
+                                <span>Healthcare</span>
+                            </div>
+                            <a href="project-emr.html" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-item" data-category="ai-ml education" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://images.unsplash.com/photo-1591453089816-0fbb971b454c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="SmartQuiz">
+                        </div>
+                        <div class="project-content">
+                            <h3>SmartQuiz</h3>
+                            <p>An AI-powered system that generates multiple-choice questions using large language models for educational purposes.</p>
+                            <div class="project-tags">
+                                <span>Python</span>
+                                <span>ML/AI</span>
+                                <span>Education</span>
+                            </div>
+                            <a href="project-smartquiz.html" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-item" data-category="healthcare ai-ml" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="Predictive Health Engine">
+                        </div>
+                        <div class="project-content">
+                            <h3>Predictive Health Engine</h3>
+                            <p>A machine learning model that predicts health outcomes based on patient data and historical trends.</p>
+                            <div class="project-tags">
+                                <span>Python</span>
+                                <span>Machine Learning</span>
+                                <span>Healthcare</span>
+                            </div>
+                            <a href="project-health-engine.html" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="project-item" data-category="web data" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="Web Scraping Demo">
+                        </div>
+                        <div class="project-content">
+                            <h3>Web Scraping & Reverse Engineering</h3>
+                            <p>A collection of tools and demonstrations showcasing web scraping techniques and reverse engineering skills.</p>
+                            <div class="project-tags">
+                                <span>Python</span>
+                                <span>BeautifulSoup</span>
+                                <span>Data Extraction</span>
+                            </div>
+                            <a href="project-webscraping.html" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 5 -->
+                <div class="project-item" data-category="healthcare data" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="Health Data Analytics">
+                        </div>
+                        <div class="project-content">
+                            <h3>Health Data Analytics Dashboard</h3>
+                            <p>A data visualization dashboard for analyzing healthcare metrics and patient outcomes.</p>
+                            <div class="project-tags">
+                                <span>Python</span>
+                                <span>Tableau</span>
+                                <span>Data Analysis</span>
+                            </div>
+                            <a href="project-health-analytics.html" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 6 -->
+                <div class="project-item" data-category="web" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="Portfolio Website">
+                        </div>
+                        <div class="project-content">
+                            <h3>Modern Portfolio Website</h3>
+                            <p>A responsive, modern portfolio website built with HTML, CSS, and JavaScript to showcase projects and skills.</p>
+                            <div class="project-tags">
+                                <span>HTML/CSS</span>
+                                <span>JavaScript</span>
+                                <span>Responsive Design</span>
+                            </div>
+                            <a href="project-portfolio.html" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Details Showcase -->
+    <section class="project-showcase section-padding bg-light">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Featured Project</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="showcase-content">
+                <div class="showcase-image" data-aos="fade-right">
+                    <img src="https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1032&q=80" alt="EMR System">
+                </div>
+                <div class="showcase-details" data-aos="fade-left">
+                    <h3>Electronic Medical Records (EMR) System</h3>
+                    <p>A comprehensive healthcare management solution built using Django and PostgreSQL, designed to streamline patient care and records management.</p>
+                    
+                    <h4>Key Features:</h4>
+                    <ul>
+                        <li>Patient demographics and medical history management</li>
+                        <li>Appointment scheduling and tracking</li>
+                        <li>Medication prescriptions and monitoring</li>
+                        <li>Laboratory test ordering and results management</li>
+                        <li>Secure user authentication with role-based access control</li>
+                        <li>Analytics dashboard for healthcare metrics</li>
+                    </ul>
+                    
+                    <h4>Technologies Used:</h4>
+                    <div class="tech-stack">
+                        <span>Django</span>
+                        <span>PostgreSQL</span>
+                        <span>Python</span>
+                        <span>JavaScript</span>
+                        <span>Bootstrap</span>
+                        <span>Docker</span>
+                    </div>
+                    
+                    <a href="project-emr.html" class="btn btn-primary">View Full Case Study</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="contact-cta section-padding">
+        <div class="container">
+            <div class="cta-content" data-aos="fade-up">
+                <h2>Have a Project Idea?</h2>
+                <p>Let's collaborate and bring your vision to life with innovative solutions.</p>
+                <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span>VM</span>
+                    <p>Victor Mokut</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Connect</h4>
+                        <ul>
+                            <li><a href="https://github.com/vikmokut" target="_blank">GitHub</a></li>
+                            <li><a href="https://linkedin.com/in/vikmokut" target="_blank">LinkedIn</a></li>
+                            <li><a href="mailto:vikmokut@gmail.com">Email</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Victor Mokut. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <a href="#" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- AOS Animation Script -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

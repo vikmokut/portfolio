@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Victor Mokut</title>
+    <meta name="description" content="Read Victor Mokut's thoughts on software engineering, healthcare technology, and data science">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <span class="logo-text">VM</span>
+                </a>
+                
+                <div class="menu-toggle">
+                    <div class="hamburger"></div>
+                </div>
+                
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="blog.html" class="active">Blog</a></li>
+                    <li><a href="contact.html" class="btn btn-primary">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="container">
+            <h1 data-aos="fade-up">My Blog</h1>
+            <div class="breadcrumbs" data-aos="fade-up" data-aos-delay="100">
+                <a href="index.html">Home</a> / <span>Blog</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Category Filter -->
+    <section class="blog-filter section-padding-sm">
+        <div class="container">
+            <div class="filter-buttons" data-aos="fade-up">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="healthcare">Healthcare Tech</button>
+                <button class="filter-btn" data-filter="programming">Programming</button>
+                <button class="filter-btn" data-filter="ai-ml">AI & Machine Learning</button>
+                <button class="filter-btn" data-filter="data-science">Data Science</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Post -->
+    <section class="featured-post section-padding-sm">
+        <div class="container">
+            <div class="featured-post-card" data-aos="fade-up">
+                <div class="featured-post-img">
+                    <span class="post-tag">Featured</span>
+                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="AI in Healthcare">
+                </div>
+                <div class="featured-post-content">
+                    <span class="post-date"><i class="far fa-calendar-alt"></i> July 15, 2025</span>
+                    <h2>AI and Machine Learning: Revolutionizing Healthcare Diagnostics</h2>
+                    <p>
+                        The healthcare industry stands on the brink of a major transformation powered by artificial intelligence and machine learning. These technologies are revolutionizing how we approach medical diagnostics, patient care, and treatment planning.
+                    </p>
+                    <div class="post-meta">
+                        <span class="post-category">Healthcare Tech</span>
+                        <span class="post-category">AI & ML</span>
+                        <span class="post-read-time">7 min read</span>
+                    </div>
+                    <a href="blog-ai-healthcare.html" class="btn btn-primary">Read Article</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Posts Grid -->
+    <section class="blog-posts section-padding">
+        <div class="container">
+            <div class="blog-grid">
+                <!-- Blog Post 1 -->
+                <div class="blog-card" data-category="healthcare ai-ml" data-aos="fade-up" data-aos-delay="100">
+                    <div class="blog-img">
+                        <img src="https://images.unsplash.com/photo-1578384405199-63f476fa2bd9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Healthcare Tech">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-date">July 10, 2025</div>
+                        <h3>The Future of Healthcare Technology</h3>
+                        <p>Exploring how AI and machine learning are transforming patient care and medical diagnostics.</p>
+                        <div class="blog-meta">
+                            <span class="blog-category">Healthcare Tech</span>
+                            <span class="blog-read-time">5 min read</span>
+                        </div>
+                        <a href="blog-healthcare-tech.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Blog Post 2 -->
+                <div class="blog-card" data-category="programming" data-aos="fade-up" data-aos-delay="200">
+                    <div class="blog-img">
+                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="Data Structures">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-date">June 25, 2025</div>
+                        <h3>Mastering Advanced Data Structures</h3>
+                        <p>A deep dive into efficient algorithms and data structures for solving complex programming challenges.</p>
+                        <div class="blog-meta">
+                            <span class="blog-category">Programming</span>
+                            <span class="blog-read-time">8 min read</span>
+                        </div>
+                        <a href="blog-data-structures.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Blog Post 3 -->
+                <div class="blog-card" data-category="programming" data-aos="fade-up" data-aos-delay="300">
+                    <div class="blog-img">
+                        <img src="https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="Django">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-date">June 12, 2025</div>
+                        <h3>Building Secure Django Applications</h3>
+                        <p>Best practices for developing secure and scalable web applications with Django framework.</p>
+                        <div class="blog-meta">
+                            <span class="blog-category">Programming</span>
+                            <span class="blog-read-time">6 min read</span>
+                        </div>
+                        <a href="blog-django-security.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Blog Post 4 -->
+                <div class="blog-card" data-category="data-science" data-aos="fade-up" data-aos-delay="100">
+                    <div class="blog-img">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="Data Analysis">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-date">May 30, 2025</div>
+                        <h3>Data Analysis Techniques for Healthcare Insights</h3>
+                        <p>Extracting meaningful insights from healthcare data using advanced analytical methods.</p>
+                        <div class="blog-meta">
+                            <span class="blog-category">Data Science</span>
+                            <span class="blog-read-time">7 min read</span>
+                        </div>
+                        <a href="blog-healthcare-data.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Blog Post 5 -->
+                <div class="blog-card" data-category="ai-ml" data-aos="fade-up" data-aos-delay="200">
+                    <div class="blog-img">
+                        <img src="https://images.unsplash.com/photo-1677442135130-1953115406bd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="LLM in Education">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-date">May 15, 2025</div>
+                        <h3>Large Language Models in Education</h3>
+                        <p>How generative AI is transforming educational tools and creating personalized learning experiences.</p>
+                        <div class="blog-meta">
+                            <span class="blog-category">AI & ML</span>
+                            <span class="blog-read-time">5 min read</span>
+                        </div>
+                        <a href="blog-llm-education.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Blog Post 6 -->
+                <div class="blog-card" data-category="programming" data-aos="fade-up" data-aos-delay="300">
+                    <div class="blog-img">
+                        <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="Python Programming">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-date">April 28, 2025</div>
+                        <h3>Advanced Python Techniques for Software Engineers</h3>
+                        <p>Exploring powerful Python features that can make your code more efficient and maintainable.</p>
+                        <div class="blog-meta">
+                            <span class="blog-category">Programming</span>
+                            <span class="blog-read-time">9 min read</span>
+                        </div>
+                        <a href="blog-python-techniques.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Blog Post 7 -->
+                <div class="blog-card" data-category="healthcare" data-aos="fade-up" data-aos-delay="100">
+                    <div class="blog-img">
+                        <img src="https://images.unsplash.com/photo-1576671081837-49000212a370?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=868&q=80" alt="Healthcare Records">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-date">April 10, 2025</div>
+                        <h3>The Evolution of Electronic Health Records</h3>
+                        <p>From paper files to cloud-based systems: The journey of healthcare records management.</p>
+                        <div class="blog-meta">
+                            <span class="blog-category">Healthcare Tech</span>
+                            <span class="blog-read-time">6 min read</span>
+                        </div>
+                        <a href="blog-ehr-evolution.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Blog Post 8 -->
+                <div class="blog-card" data-category="data-science" data-aos="fade-up" data-aos-delay="200">
+                    <div class="blog-img">
+                        <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1476&q=80" alt="Data Visualization">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-date">March 22, 2025</div>
+                        <h3>Effective Data Visualization for Healthcare Metrics</h3>
+                        <p>Creating impactful visual representations of complex healthcare data for better decision making.</p>
+                        <div class="blog-meta">
+                            <span class="blog-category">Data Science</span>
+                            <span class="blog-read-time">7 min read</span>
+                        </div>
+                        <a href="blog-data-viz.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Blog Post 9 -->
+                <div class="blog-card" data-category="ai-ml" data-aos="fade-up" data-aos-delay="300">
+                    <div class="blog-img">
+                        <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=465&q=80" alt="ML Algorithms">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-date">March 5, 2025</div>
+                        <h3>Understanding ML Algorithms for Predictive Healthcare</h3>
+                        <p>A comprehensive guide to machine learning models used in healthcare outcome prediction.</p>
+                        <div class="blog-meta">
+                            <span class="blog-category">AI & ML</span>
+                            <span class="blog-read-time">10 min read</span>
+                        </div>
+                        <a href="blog-ml-healthcare.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Pagination -->
+            <div class="pagination" data-aos="fade-up">
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <span>...</span>
+                <a href="#">5</a>
+                <a href="#" class="next">Next <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter section-padding bg-light">
+        <div class="container">
+            <div class="newsletter-content" data-aos="fade-up">
+                <h2>Subscribe to My Newsletter</h2>
+                <p>Stay updated with my latest articles, projects, and insights on technology and healthcare.</p>
+                <form class="newsletter-form">
+                    <div class="form-group">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </div>
+                    <div class="form-note">
+                        <small>I respect your privacy. No spam, ever.</small>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span>VM</span>
+                    <p>Victor Mokut</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Connect</h4>
+                        <ul>
+                            <li><a href="https://github.com/vikmokut" target="_blank">GitHub</a></li>
+                            <li><a href="https://linkedin.com/in/vikmokut" target="_blank">LinkedIn</a></li>
+                            <li><a href="mailto:vikmokut@gmail.com">Email</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Victor Mokut. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <a href="#" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- AOS Animation Script -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

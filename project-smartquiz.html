@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartQuiz - Interactive Assessment System | Victor Mokut</title>
+    <meta name="description" content="An adaptive learning and assessment platform developed by Victor Mokut">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <span class="logo-text">VM</span>
+                </a>
+                
+                <div class="menu-toggle">
+                    <div class="hamburger"></div>
+                </div>
+                
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html" class="active">Projects</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html" class="btn btn-primary">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="container">
+            <div class="breadcrumbs" data-aos="fade-up">
+                <a href="index.html">Home</a> / <a href="projects.html">Projects</a> / <span>SmartQuiz</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Hero -->
+    <section class="project-hero section-padding">
+        <div class="container">
+            <div class="project-hero-content">
+                <div class="project-hero-text" data-aos="fade-right">
+                    <h1>SmartQuiz</h1>
+                    <p class="project-subtitle">Adaptive Learning & Assessment Platform</p>
+                    <p class="project-description">
+                        An intelligent quiz system that adapts to individual learning patterns and provides personalized feedback for improved knowledge retention.
+                    </p>
+                    <div class="project-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">Year</span>
+                            <span class="meta-value">2023</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Role</span>
+                            <span class="meta-value">Lead Developer</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Technologies</span>
+                            <span class="meta-value">React.js, Node.js, MongoDB, Express, ML Algorithms</span>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="btn btn-outline">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
+                        <a href="#" class="btn btn-primary">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                    </div>
+                </div>
+                <div class="project-hero-img" data-aos="fade-left">
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="SmartQuiz Dashboard">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Overview -->
+    <section class="project-overview section-padding bg-light">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Project Overview</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="project-overview-content" data-aos="fade-up">
+                <p>
+                    SmartQuiz is an intelligent assessment platform designed to revolutionize the way students learn and teachers evaluate knowledge. Unlike traditional quiz systems that provide the same questions to all users, SmartQuiz adapts to each learner's strengths and weaknesses, delivering personalized question sets that optimize learning outcomes.
+                </p>
+                <p>
+                    The project was conceptualized after identifying significant inefficiencies in conventional testing methods that often fail to address individual learning gaps. By incorporating machine learning algorithms, SmartQuiz analyzes user performance in real-time to identify knowledge gaps and automatically adjusts question difficulty and topic focus accordingly.
+                </p>
+                <p>
+                    Beyond just assessment, the platform serves as a comprehensive learning tool by providing detailed explanations, relevant resources, and personalized study recommendations based on performance analytics.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="key-features section-padding">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Key Features</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Adaptive Question Selection</h3>
+                    <p>Dynamically selects questions based on user performance history and learning patterns to target knowledge gaps effectively.</p>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Comprehensive Analytics</h3>
+                    <p>Detailed performance metrics with visual representations of progress, strengths, and areas needing improvement.</p>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3>Personalized Learning Paths</h3>
+                    <p>Custom-tailored study recommendations and resource suggestions based on individual performance data.</p>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Spaced Repetition System</h3>
+                    <p>Intelligently schedules review of previously missed concepts to optimize long-term knowledge retention.</p>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3>Educator Dashboard</h3>
+                    <p>Comprehensive tools for teachers to create question banks, monitor class progress, and identify common misconceptions.</p>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Cross-Platform Accessibility</h3>
+                    <p>Responsive design ensures seamless experience across desktop, tablet, and mobile devices with progress synchronization.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Implementation -->
+    <section class="technical-implementation section-padding bg-light">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Technical Implementation</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="tech-content">
+                <div class="tech-stack" data-aos="fade-up">
+                    <h3>Technology Stack</h3>
+                    <div class="stack-grid">
+                        <div class="stack-item">
+                            <div class="stack-icon">
+                                <i class="fab fa-react"></i>
+                            </div>
+                            <div class="stack-info">
+                                <h4>Frontend</h4>
+                                <p>React.js with Redux for state management. Material UI and custom CSS for the responsive interface. Chart.js for data visualization.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="stack-item">
+                            <div class="stack-icon">
+                                <i class="fab fa-node-js"></i>
+                            </div>
+                            <div class="stack-info">
+                                <h4>Backend</h4>
+                                <p>Node.js with Express framework. RESTful API architecture. JWT for authentication and authorization.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="stack-item">
+                            <div class="stack-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div class="stack-info">
+                                <h4>Database</h4>
+                                <p>MongoDB for flexible document storage. Mongoose ODM for data modeling. Redis for caching frequently accessed data.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="stack-item">
+                            <div class="stack-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="stack-info">
+                                <h4>Machine Learning</h4>
+                                <p>TensorFlow.js for client-side processing. Python with scikit-learn for server-side algorithms. Custom recommendation engine.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="stack-item">
+                            <div class="stack-icon">
+                                <i class="fas fa-cloud"></i>
+                            </div>
+                            <div class="stack-info">
+                                <h4>Deployment</h4>
+                                <p>Docker containers for consistent environments. AWS for hosting. CI/CD pipeline with GitHub Actions.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="architecture-diagram" data-aos="fade-up">
+                    <h3>System Architecture</h3>
+                    <div class="diagram-img">
+                        <img src="https://images.unsplash.com/photo-1542903660-eedba2cda473?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="SmartQuiz System Architecture">
+                    </div>
+                    <div class="diagram-caption">
+                        High-level architecture showing the interaction between user interfaces, API layers, core services, and data persistence.
+                    </div>
+                </div>
+                
+                <div class="code-highlight" data-aos="fade-up">
+                    <h3>Algorithm Highlight: Adaptive Question Selection</h3>
+                    <div class="code-block">
+// Simplified version of the adaptive question selection algorithm
+function selectNextQuestion(userPerformance, questionPool) {
+  // Calculate difficulty target based on recent performance
+  const targetDifficulty = calculateTargetDifficulty(userPerformance);
+  
+  // Identify knowledge areas that need reinforcement
+  const weakAreas = identifyWeakAreas(userPerformance);
+  
+  // Weight questions by relevance to weak areas and appropriate difficulty
+  const weightedQuestions = questionPool.map(question => {
+    const difficultyMatch = 1 - Math.abs(question.difficulty - targetDifficulty);
+    const topicRelevance = calculateTopicRelevance(question.topics, weakAreas);
+    const timeFactor = calculateSpacedRepetitionFactor(question, userPerformance);
+    
+    return {
+      ...question,
+      weight: difficultyMatch * 0.3 + topicRelevance * 0.5 + timeFactor * 0.2
+    };
+  });
+  
+  // Sort by weight and select top question with probabilistic selection
+  return probabilisticSelection(weightedQuestions.sort((a, b) => b.weight - a.weight));
+}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenges and Solutions -->
+    <section class="challenges-section section-padding">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Challenges & Solutions</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="challenges-grid">
+                <div class="challenge-item" data-aos="fade-up">
+                    <div class="challenge-header">
+                        <h3>Challenge 1: Algorithm Cold Start Problem</h3>
+                    </div>
+                    <div class="challenge-content">
+                        <p class="problem">
+                            <strong>Problem:</strong> The adaptive system initially had no data about new users, making it difficult to provide personalized questions from the start.
+                        </p>
+                        <p class="solution">
+                            <strong>Solution:</strong> Implemented a calibration phase with strategically selected questions covering various difficulty levels and topics. This provided baseline data to kickstart the personalization algorithm. Additionally, incorporated collaborative filtering to leverage patterns from similar users.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="challenge-item" data-aos="fade-up">
+                    <div class="challenge-header">
+                        <h3>Challenge 2: Real-time Performance with Large Question Banks</h3>
+                    </div>
+                    <div class="challenge-content">
+                        <p class="problem">
+                            <strong>Problem:</strong> As the question database grew, query performance degraded, affecting the real-time nature of the adaptive system.
+                        </p>
+                        <p class="solution">
+                            <strong>Solution:</strong> Implemented multi-level caching strategy using Redis and browser storage. Optimized database indexing for question retrieval patterns. Pre-computed potential question sets during user idle time to reduce selection latency during active quiz sessions.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="challenge-item" data-aos="fade-up">
+                    <div class="challenge-header">
+                        <h3>Challenge 3: Balancing Learning and Assessment</h3>
+                    </div>
+                    <div class="challenge-content">
+                        <p class="problem">
+                            <strong>Problem:</strong> Early versions focused too heavily on assessment, without adequately supporting the learning process when knowledge gaps were identified.
+                        </p>
+                        <p class="solution">
+                            <strong>Solution:</strong> Developed an integrated learning module that automatically provides relevant educational content when users struggle with specific concepts. Incorporated detailed explanations for all questions and implemented a "Learn Mode" that focuses on concept mastery rather than evaluation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results and Impact -->
+    <section class="results-section section-padding bg-light">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Results & Impact</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="results-content">
+                <div class="stats-grid" data-aos="fade-up">
+                    <div class="stat-card">
+                        <div class="stat-value">87%</div>
+                        <div class="stat-label">Improvement in Knowledge Retention</div>
+                        <div class="stat-description">Compared to traditional quiz systems in controlled studies</div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-value">10,000+</div>
+                        <div class="stat-label">Active Users</div>
+                        <div class="stat-description">Across 15 educational institutions</div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-value">32%</div>
+                        <div class="stat-label">Reduction in Study Time</div>
+                        <div class="stat-description">For achieving equivalent mastery levels</div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-value">4.8/5</div>
+                        <div class="stat-label">User Satisfaction Rating</div>
+                        <div class="stat-description">Based on post-usage surveys</div>
+                    </div>
+                </div>
+                
+                <div class="testimonial" data-aos="fade-up">
+                    <div class="testimonial-content">
+                        <p>
+                            "SmartQuiz has transformed how we assess and support student learning. The adaptive nature of the platform has helped us identify and address knowledge gaps more efficiently than ever before."
+                        </p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=388&q=80" alt="Dr. Sarah Johnson">
+                        </div>
+                        <div class="author-info">
+                            <h4>Dr. Sarah Johnson</h4>
+                            <p>Director of Educational Technology, University of Technology</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="case-study" data-aos="fade-up">
+                    <h3>Case Study: Metro Community College Implementation</h3>
+                    <p>
+                        Metro Community College implemented SmartQuiz across their introductory STEM courses in Fall 2023. After one semester of use:
+                    </p>
+                    <ul>
+                        <li>Average course completion rates increased by 22%</li>
+                        <li>Final exam scores improved by an average of 15 percentage points</li>
+                        <li>Student engagement with course materials increased by 40%</li>
+                        <li>Instructor time spent on assessment creation and grading reduced by 60%</li>
+                    </ul>
+                    <p>
+                        The system's analytics also helped instructors identify and address common misconceptions that had previously gone undetected in traditional testing environments.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Gallery -->
+    <section class="project-gallery section-padding">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Project Gallery</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item" data-aos="fade-up">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="SmartQuiz Dashboard">
+                    <div class="gallery-caption">User dashboard showing performance analytics and recommended study areas</div>
+                </div>
+                
+                <div class="gallery-item" data-aos="fade-up">
+                    <img src="https://images.unsplash.com/photo-1517842645767-c639042777db?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="Quiz Interface">
+                    <div class="gallery-caption">Adaptive quiz interface with various question types</div>
+                </div>
+                
+                <div class="gallery-item" data-aos="fade-up">
+                    <img src="https://images.unsplash.com/photo-1551739440-5dd934d3a94a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80" alt="Analytics View">
+                    <div class="gallery-caption">Comprehensive analytics view showing learning progress over time</div>
+                </div>
+                
+                <div class="gallery-item" data-aos="fade-up">
+                    <img src="https://images.unsplash.com/photo-1522152302542-71a8e5172aa1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="Mobile Experience">
+                    <div class="gallery-caption">Mobile experience showing responsive design across devices</div>
+                </div>
+                
+                <div class="gallery-item" data-aos="fade-up">
+                    <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Teacher Dashboard">
+                    <div class="gallery-caption">Educator interface for monitoring class performance and creating content</div>
+                </div>
+                
+                <div class="gallery-item" data-aos="fade-up">
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Learning Module">
+                    <div class="gallery-caption">Integrated learning module with multimedia educational content</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Projects -->
+    <section class="related-projects section-padding bg-light">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Related Projects</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="EMR System">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span>Healthcare</span>
+                            <span>Web Application</span>
+                        </div>
+                        <h3>Electronic Medical Records System</h3>
+                        <p>A comprehensive EMR system for healthcare providers with advanced patient data management capabilities.</p>
+                        <a href="project-emr.html" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="Predictive Health Engine">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span>Healthcare</span>
+                            <span>Machine Learning</span>
+                        </div>
+                        <h3>Predictive Health Engine</h3>
+                        <p>AI-driven system for predicting patient health risks based on historical medical data and lifestyle factors.</p>
+                        <a href="project-predictive-health.html" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta section-padding">
+        <div class="container">
+            <div class="cta-content" data-aos="fade-up">
+                <h2>Interested in working together?</h2>
+                <p>Let's discuss how we can collaborate on your next project.</p>
+                <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span>VM</span>
+                    <p>Victor Mokut</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Connect</h4>
+                        <ul>
+                            <li><a href="https://github.com/vikmokut" target="_blank">GitHub</a></li>
+                            <li><a href="https://linkedin.com/in/vikmokut" target="_blank">LinkedIn</a></li>
+                            <li><a href="mailto:vikmokut@gmail.com">Email</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Victor Mokut. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <a href="#" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- AOS Animation Script -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

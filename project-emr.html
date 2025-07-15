@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMR System - Victor Mokut</title>
+    <meta name="description" content="EMR System - A comprehensive electronic medical records system built with Django and PostgreSQL">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <span class="logo-text">VM</span>
+                </a>
+                
+                <div class="menu-toggle">
+                    <div class="hamburger"></div>
+                </div>
+                
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html" class="active">Projects</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html" class="btn btn-primary">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="container">
+            <h1 data-aos="fade-up">EMR System</h1>
+            <div class="breadcrumbs" data-aos="fade-up" data-aos-delay="100">
+                <a href="index.html">Home</a> / <a href="projects.html">Projects</a> / <span>EMR System</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Details -->
+    <section class="project-details section-padding">
+        <div class="container">
+            <div class="project-header" data-aos="fade-up">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1032&q=80" alt="EMR System">
+                </div>
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <h4>Project Type</h4>
+                        <p>Healthcare Information System</p>
+                    </div>
+                    <div class="meta-item">
+                        <h4>Technologies</h4>
+                        <p>Django, PostgreSQL, Python, JavaScript, Bootstrap, Docker</p>
+                    </div>
+                    <div class="meta-item">
+                        <h4>Timeline</h4>
+                        <p>6 months</p>
+                    </div>
+                    <div class="meta-item">
+                        <h4>Role</h4>
+                        <p>Lead Developer</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-content" data-aos="fade-up">
+                <h2>Project Overview</h2>
+                <p>
+                    The Electronic Medical Records (EMR) System is a comprehensive healthcare management solution designed to streamline patient care and records management. Built using Django and PostgreSQL, this system provides healthcare facilities with a robust platform for managing patient data, appointments, prescriptions, and more.
+                </p>
+                <p>
+                    Drawing from my extensive experience in healthcare records management, I developed this system to address the common challenges faced by medical institutions in transitioning from paper-based to electronic record-keeping systems.
+                </p>
+
+                <h2>Key Features</h2>
+                <div class="features-grid">
+                    <div class="feature-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="feature-icon">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Patient Management</h3>
+                            <p>Comprehensive patient profiles with medical history, demographics, and insurance information.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item" data-aos="fade-up" data-aos-delay="150">
+                        <div class="feature-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Appointment Scheduling</h3>
+                            <p>Intuitive calendar interface for scheduling and managing patient appointments.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="feature-icon">
+                            <i class="fas fa-prescription-bottle-alt"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Medication Management</h3>
+                            <p>Track prescriptions, refills, and medication history with automated alerts for potential interactions.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item" data-aos="fade-up" data-aos-delay="250">
+                        <div class="feature-icon">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Lab Integration</h3>
+                            <p>Order laboratory tests and view results directly within the patient's record.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item" data-aos="fade-up" data-aos-delay="300">
+                        <div class="feature-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Security & Compliance</h3>
+                            <p>Role-based access control and audit trails to ensure data privacy and regulatory compliance.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item" data-aos="fade-up" data-aos-delay="350">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Analytics Dashboard</h3>
+                            <p>Visualize key healthcare metrics and generate reports for administrative decision-making.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>Technical Implementation</h2>
+                <p>
+                    The EMR System was built using a modern tech stack to ensure scalability, security, and performance:
+                </p>
+                <ul class="tech-list">
+                    <li><strong>Backend:</strong> Django framework with REST API endpoints</li>
+                    <li><strong>Database:</strong> PostgreSQL for robust data storage and complex queries</li>
+                    <li><strong>Frontend:</strong> HTML5, CSS3, JavaScript with Bootstrap for responsive design</li>
+                    <li><strong>Authentication:</strong> JWT-based authentication system with role-based permissions</li>
+                    <li><strong>Containerization:</strong> Docker for consistent deployment across environments</li>
+                    <li><strong>Testing:</strong> Comprehensive unit and integration tests using pytest</li>
+                </ul>
+                
+                <h2>Challenges & Solutions</h2>
+                <div class="challenges-solutions">
+                    <div class="challenge-item" data-aos="fade-up">
+                        <h3>Data Migration</h3>
+                        <p><strong>Challenge:</strong> Converting existing paper records and legacy database entries into the new system.</p>
+                        <p><strong>Solution:</strong> Developed a custom ETL (Extract, Transform, Load) process with validation rules to ensure data integrity during migration.</p>
+                    </div>
+                    
+                    <div class="challenge-item" data-aos="fade-up">
+                        <h3>User Adoption</h3>
+                        <p><strong>Challenge:</strong> Training medical staff and ensuring smooth transition from paper-based workflows.</p>
+                        <p><strong>Solution:</strong> Created an intuitive UI with contextual help features and implemented a phased rollout approach with dedicated training sessions.</p>
+                    </div>
+                    
+                    <div class="challenge-item" data-aos="fade-up">
+                        <h3>Regulatory Compliance</h3>
+                        <p><strong>Challenge:</strong> Ensuring the system complies with healthcare data privacy regulations.</p>
+                        <p><strong>Solution:</strong> Implemented comprehensive audit logging, data encryption, and configurable access controls to meet compliance requirements.</p>
+                    </div>
+                </div>
+                
+                <h2>Results & Impact</h2>
+                <div class="results-section" data-aos="fade-up">
+                    <div class="result-item">
+                        <div class="result-number">40%</div>
+                        <p>Reduction in administrative overhead</p>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-number">60%</div>
+                        <p>Decrease in prescription errors</p>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-number">25%</div>
+                        <p>Improvement in appointment adherence</p>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-number">90%</div>
+                        <p>User satisfaction rate</p>
+                    </div>
+                </div>
+                
+                <p>
+                    The EMR System has significantly improved operational efficiency at the healthcare facilities where it has been implemented. Medical staff can now access patient information quickly, make more informed decisions, and provide better care coordination. The system's reporting capabilities have also enabled administrators to identify trends and optimize resource allocation.
+                </p>
+                
+                <div class="project-gallery" data-aos="fade-up">
+                    <h2>Project Gallery</h2>
+                    <div class="gallery-grid">
+                        <div class="gallery-item">
+                            <img src="https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="Dashboard View">
+                            <p>Dashboard Interface</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="Patient Records">
+                            <p>Patient Records Module</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://images.unsplash.com/photo-1581091012184-7e0cdfbb6797?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="Appointment Scheduling">
+                            <p>Appointment Scheduling System</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-conclusion" data-aos="fade-up">
+                    <h2>Conclusion</h2>
+                    <p>
+                        The EMR System represents a significant advancement in healthcare information management, combining my expertise in both healthcare records and software engineering. By addressing the specific needs of medical facilities, the system has proven to be a valuable tool for improving patient care, streamlining administrative tasks, and enhancing data-driven decision-making.
+                    </p>
+                    <p>
+                        Future plans include developing a patient portal for self-service appointment booking and record access, as well as integrating with wearable health devices for real-time patient monitoring.
+                    </p>
+                </div>
+                
+                <div class="project-nav" data-aos="fade-up">
+                    <a href="project-webscraping.html" class="prev-project">
+                        <i class="fas fa-arrow-left"></i>
+                        <span>Previous Project</span>
+                    </a>
+                    <a href="project-smartquiz.html" class="next-project">
+                        <span>Next Project</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Projects -->
+    <section class="related-projects section-padding bg-light">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Related Projects</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="Predictive Health Engine">
+                    </div>
+                    <div class="project-content">
+                        <h3>Predictive Health Engine</h3>
+                        <p>A machine learning model that predicts health outcomes based on patient data and historical trends.</p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>Machine Learning</span>
+                            <span>Healthcare</span>
+                        </div>
+                        <a href="project-health-engine.html" class="btn btn-sm">View Project</a>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="Health Data Analytics">
+                    </div>
+                    <div class="project-content">
+                        <h3>Health Data Analytics Dashboard</h3>
+                        <p>A data visualization dashboard for analyzing healthcare metrics and patient outcomes.</p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>Tableau</span>
+                            <span>Data Analysis</span>
+                        </div>
+                        <a href="project-health-analytics.html" class="btn btn-sm">View Project</a>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1591453089816-0fbb971b454c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="SmartQuiz">
+                    </div>
+                    <div class="project-content">
+                        <h3>SmartQuiz</h3>
+                        <p>An AI-powered system that generates multiple-choice questions using large language models for educational purposes.</p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>ML/AI</span>
+                            <span>Education</span>
+                        </div>
+                        <a href="project-smartquiz.html" class="btn btn-sm">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="contact-cta section-padding">
+        <div class="container">
+            <div class="cta-content" data-aos="fade-up">
+                <h2>Interested in a Similar Project?</h2>
+                <p>Let's discuss how I can help bring your healthcare technology idea to life.</p>
+                <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span>VM</span>
+                    <p>Victor Mokut</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Connect</h4>
+                        <ul>
+                            <li><a href="https://github.com/vikmokut" target="_blank">GitHub</a></li>
+                            <li><a href="https://linkedin.com/in/vikmokut" target="_blank">LinkedIn</a></li>
+                            <li><a href="mailto:vikmokut@gmail.com">Email</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Victor Mokut. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <a href="#" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- AOS Animation Script -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
